@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="newbankacc.js"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <script src="newbankacc.js"></script>
+
+</head>
+
+<body style="background-color: rgb(7, 115, 151);">
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(250, 250, 17);">                 
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"   style="color: blue;"> <h1> FEDERAL BANK </h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" onclick="bank.balanceEnquiry()"> BALANCEENQUIRY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href=" #exampleModal " data-bs-toggle="modal">FUNDTRANSFER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"> <span id="user"></span>
+          </li>
+          <li class="nav-item"  >
+            <a class="nav-link active" aria-current="page" href="#" onclick="bank.logout()" style="margin-left:700px ; color:rgb(15, 1, 1);" >LOGOUT</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container" >
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> Transfer Amount</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> 
+          <input type="text" name="" id="acno"  class="form-control mt-2" placeholder="to accound number">
+          <input type="number" name=""  id="amt" class="form-control mt-2" placeholder="enter amount">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="bank.fundTransfer() ">proceed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+      <div>
+
+        <h3 style="text-align: center;"mt-500px>WELCOME TO BANK HOME PAGE</h3>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+<script>
+  let logeduser = JSON.parse(sessionStorage.getItem(sessionStorage.key(0)))
+  console.log(logeduser);
+  user.innerHTML = logeduser.account_name;
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
